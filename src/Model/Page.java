@@ -8,16 +8,15 @@ public class Page extends Subject {
 
     public void addPage(Page newPage) {
         pages.add(newPage);
-    }
-
-    public void setPage() {
+    }// ading new page to the list
+    public void setPage() {//updating the page
     }
 
     public List<Page> getPages() {
         return pages;
-    }
+    }// retrive page
 
     public void removePage(Page page) {
         pages.remove(page);
-    }
+    } // remove pages
 }

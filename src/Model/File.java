@@ -9,17 +9,16 @@ public class File extends Subject {
 
     public void addFile(File file) {
         files.add(file);
-    }
+    }//adding new file to the list
 
-    public void setFile() {
-
+    public void setFile(File file, int index) {// updating the desired file
     }
 
     public List<File> getFile() {
         return files;
-    }
+    }// returning the files
 
     public void removeFile(File file) {
         files.remove(file);
-    }
+    }// deteling the files from the list
 }

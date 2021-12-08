@@ -9,15 +9,15 @@ public class Comment extends Subject {
 
     public void addComment(Comment comment) {
         comments.add(comment);
-    }
+    }// add new page to the list
 
-    public void setComment(String comment, int index) {
+    public void setComment(String comment, int index) {// setting the comment at certain index
 
     }
 
     public List<Comment> getComment() {
         return comments;
-    }
+    }//retrive the desired comment
 
     public void removeComment(int index) {
         //remove the comment at the index.

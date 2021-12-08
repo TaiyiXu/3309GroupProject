@@ -14,7 +14,7 @@ public class ViewPage extends Model.Observer {
         this.controller = controller;
     }
 
-    public void update() {
+    public void update() {//getting pages
         this.show();
     }
 
@@ -24,16 +24,16 @@ public class ViewPage extends Model.Observer {
 
     public Model.Page getPageModel() {
         return page;
-    }
+    }// get the page model
 
-    public void setPageModel(Page page) {
+    public void setPageModel(Page page) {//setup model for this page
         this.page = page;
         this.page.registerObserver(this);
     }
 
     public Controller.CourseToolController getPageController() {
         return controller;
-    }
+    }//setting controler of this page
 
     public void setPageController(CourseToolController controller) {
         this.controller = controller;

@@ -15,7 +15,7 @@ public class ViewComment extends Model.Observer {
 
     public void update() {
         this.show();
-    }
+    }//showing the updated files
 
     public void show() {
         // Display comment
@@ -23,9 +23,9 @@ public class ViewComment extends Model.Observer {
 
     public Model.Comment getComment() {
         return comment;
-    }
+    }//shwoing the comment
 
-    public void setCommentModel(Model.Comment model) {
+    public void setCommentModel(Model.Comment model) {//setup the model of this view
         this.comment = comment;
         this.comment.registerObserver(this);
 
@@ -33,9 +33,9 @@ public class ViewComment extends Model.Observer {
 
     public Controller.CourseToolController getController() {
         return controller;
-    }
+    }//getting the controller
 
     public void setController(Controller.CourseToolController controller) {
         this.controller = controller;
-    }
+    }//seting the controller
 }
