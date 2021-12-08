@@ -19,58 +19,72 @@ public class CourseToolController {
     View.ViewFile viewFile;
     View.ViewPage viewPage;
 
-    public CourseToolController(Model.Comment comment, Model.Page page, Model.File file, View.ViewComment viewComment, View.ViewFile viewFile, View.ViewPage viewPage){
-        this.comment=comment;
-        this.page=page;
-        this.file=file;
+    public CourseToolController(Model.Comment comment, Model.Page page, Model.File file, View.ViewComment viewComment, View.ViewPage viewPage, View.ViewFile viewFile) {
+        this.comment = comment;
+        this.page = page;
+        this.file = file;
 
-        this.viewComment=viewComment;//setting the controller of the
-        this.viewComment.setController(this);
+        this.viewComment = viewComment; //setting the viewComment
+        this.viewComment.setController(this); //setting the controller to the viewComment
+        this.viewComment.show(); //showing the viewComment
 
-        this.viewPage=viewPage;
-        this.viewPage.setPageController(this);
+        this.viewPage = viewPage; //setting the viewPage
+        this.viewPage.setPageController(this); //setting the controller to the viewPage
+        this.viewPage.show(); //showing the viewPage
 
-        this.viewFile=viewFile;
-        this.viewFile.setFileController(this);
+        this.viewFile = viewFile; //setting the viewFile
+        this.viewFile.setFileController(this); //setting the controller to the viewFile
+        this.viewFile.show(); //showing the viewFile
 
     }
+
     // actions for Comments
-    public void newComment(Comment newComment){// use to add new comment to
+    public void newComment(Comment newComment) {
+        // use to add new comment
         comment.addComment(newComment);
-    }
-    
-    public void editComment(Comment newComment, int index){// changing the selected index of Comment list to new desired comment
-        
+        this.viewComment.show();
     }
 
-    public void deleteComment(int index){// deleting the selected comment.
+    public void editComment(Comment newComment, int index) {
+        // changing the selected index of Comment list to new desired comment
+        this.viewComment.show();
+    }
 
+    public void deleteComment(int index) {
+        // deleting the selected comment.
+        this.viewComment.show();
     }
 
     //actions for Pages
-    public void newPage(Page pageName){
+    public void newPage(Page pageName) {
         page.addPage(pageName);
+        this.viewPage.show();
     }
 
-    public void editPage(){
-
+    public void editPage() {
+        // Code for editing the page
+        this.viewPage.show();
     }
 
-    public void deletePage(){
-
+    public void deletePage() {
+        // Code for deleting the page
+        this.viewPage.show();
     }
 
     //actions for File
-    public void newFile(){
-
+    public void newFile(File fileName) {
+        // Code for adding new file
+        this.viewFile.show();
     }
 
-    public void editFile(){
-
+    public void editFile() {
+        // Code for editing the file
+        this.viewFile.show();
     }
 
-    public void deleteFile(){
-
+    public void deleteFile() {
+        // Code for deleting the file
+        this.viewFile.show();
     }
 
 }
